@@ -7,11 +7,8 @@ class Solution {
      */
     function minMovesToSeat($seats, $students) {
         $move = 0;
-        if(count($students) != count($seats)) return false;
-
         sort($seats);
         sort($students);
-
         foreach($students as $key => $student){
             $move = $move + abs($student - $seats[$key]);
         }
