@@ -5,7 +5,6 @@ class Solution {
      * @return Integer
      */
     function romanToInt($s) {
-        $test = [];
         $number = $value = 0;
         $skip = 0;
         $symbols = [
@@ -37,10 +36,8 @@ class Solution {
                 $value = $values[array_search($rev, $symbols)];
             }
             $number += $value;
-            $test[] = $value;
         }
         
-        // return print_r($test);
         return $number;
     }
 }
